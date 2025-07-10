@@ -1,6 +1,7 @@
 package com.mycompany.atmbancario.servlets;
 
-import com.mycompany.atmbancario.db.DatabaseConnection;
+import com.mycompany.atmbancario.models.Conta;
+import com.mycompany.atmbancario.models.ContaDAO;
 import com.mycompany.atmbancario.models.Usuario;
 import com.mycompany.atmbancario.models.UsuarioDAO;
 import jakarta.servlet.ServletException;
@@ -10,10 +11,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 @WebServlet(name = "LoginServlet", urlPatterns = {"/login"})
 public class LoginServlet extends HttpServlet {
@@ -24,13 +21,18 @@ public class LoginServlet extends HttpServlet {
         String cpf = request.getParameter("cpf");
         String senha = request.getParameter("senha");
         
-        UsuarioDAO dao = new UsuarioDAO();
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
         
-        Usuario usuario = dao.buscarPorCpfSenha(cpf, senha);
+        Usuario usuario = usuarioDAO.buscarPorCpfSenha(cpf, senha);
         
         if (usuario != null) {
             HttpSession session = request.getSession();
             session.setAttribute("id_usuario", usuario.getIdUsuario());
+            
+            ContaDAO contaDAO = new ContaDAO();
+            Conta conta = contaDAO.buscarPorIdUsuario(usuario.getIdUsuario());
+            session.setAttribute("conta", conta);
+            
             response.sendRedirect("atm.jsp");
         } else {
             response.sendRedirect("index.jsp?error=1");

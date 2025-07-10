@@ -1,4 +1,9 @@
+<%@page import="com.mycompany.atmbancario.models.Conta"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    Conta conta = (Conta) session.getAttribute("conta");
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +13,7 @@
 <body>
     <div class="container">
         <h1>Caixa Eletrônico - Menu</h1>
+        <p>Número da Conta: <%= conta.getNumeroConta() %></p>
         <form action="deposito" method="post">
             <label>Valor do Depósito:</label>
             <input type="number" step="0.01" name="valor" required>
