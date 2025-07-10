@@ -1,11 +1,11 @@
-C:\Users\vitor\OneDrive\Área de Trabalho\Escritório\2025.1\DevWeb\trabalho\1748994917096+ATMBancario\ATMBancario\src\main\java\com\mycompany\atmbancario\servlets\TransferenciaServlet.java
-C:\Users\vitor\OneDrive\Área de Trabalho\Escritório\2025.1\DevWeb\trabalho\1748994917096+ATMBancario\ATMBancario\src\main\java\com\mycompany\atmbancario\servlets\LoginServlet.java
-C:\Users\vitor\OneDrive\Área de Trabalho\Escritório\2025.1\DevWeb\trabalho\1748994917096+ATMBancario\ATMBancario\src\main\java\com\mycompany\atmbancario\servlets\DepositoServlet.java
-C:\Users\vitor\OneDrive\Área de Trabalho\Escritório\2025.1\DevWeb\trabalho\1748994917096+ATMBancario\ATMBancario\src\main\java\com\mycompany\atmbancario\servlets\SaldoServlet.java
-C:\Users\vitor\OneDrive\Área de Trabalho\Escritório\2025.1\DevWeb\trabalho\1748994917096+ATMBancario\ATMBancario\src\main\java\com\mycompany\atmbancario\servlets\SaqueServlet.java
-C:\Users\vitor\OneDrive\Área de Trabalho\Escritório\2025.1\DevWeb\trabalho\1748994917096+ATMBancario\ATMBancario\src\main\java\com\mycompany\atmbancario\servlets\InvestimentoServlet.java
-C:\Users\vitor\OneDrive\Área de Trabalho\Escritório\2025.1\DevWeb\trabalho\1748994917096+ATMBancario\ATMBancario\src\main\java\com\mycompany\atmbancario\servlets\ExtratoServlet.java
-C:\Users\vitor\OneDrive\Área de Trabalho\Escritório\2025.1\DevWeb\trabalho\1748994917096+ATMBancario\ATMBancario\src\main\java\com\mycompany\atmbancario\servlets\CadastroServlet.java
-C:\Users\vitor\OneDrive\Área de Trabalho\Escritório\2025.1\DevWeb\trabalho\1748994917096+ATMBancario\ATMBancario\src\main\java\com\mycompany\atmbancario\db\DatabaseConnection.java
-C:\Users\vitor\OneDrive\Área de Trabalho\Escritório\2025.1\DevWeb\trabalho\1748994917096+ATMBancario\ATMBancario\src\main\java\com\mycompany\atmbancario\JakartaRestConfiguration.java
-C:\Users\vitor\OneDrive\Área de Trabalho\Escritório\2025.1\DevWeb\trabalho\1748994917096+ATMBancario\ATMBancario\src\main\java\com\mycompany\atmbancario\resources\JakartaEE10Resource.java
+C:\repositorios_github\sistema-bancario\ATMBancario\src\main\java\com\mycompany\atmbancario\JakartaRestConfiguration.java
+C:\repositorios_github\sistema-bancario\ATMBancario\src\main\java\com\mycompany\atmbancario\db\DatabaseConnection.java
+C:\repositorios_github\sistema-bancario\ATMBancario\src\main\java\com\mycompany\atmbancario\resources\JakartaEE10Resource.java
+C:\repositorios_github\sistema-bancario\ATMBancario\src\main\java\com\mycompany\atmbancario\servlets\InvestimentoServlet.java
+C:\repositorios_github\sistema-bancario\ATMBancario\src\main\java\com\mycompany\atmbancario\servlets\ExtratoServlet.java
+C:\repositorios_github\sistema-bancario\ATMBancario\src\main\java\com\mycompany\atmbancario\servlets\CadastroServlet.java
+C:\repositorios_github\sistema-bancario\ATMBancario\src\main\java\com\mycompany\atmbancario\servlets\DepositoServlet.java
+C:\repositorios_github\sistema-bancario\ATMBancario\src\main\java\com\mycompany\atmbancario\servlets\SaqueServlet.java
+C:\repositorios_github\sistema-bancario\ATMBancario\src\main\java\com\mycompany\atmbancario\servlets\LoginServlet.java
+C:\repositorios_github\sistema-bancario\ATMBancario\src\main\java\com\mycompany\atmbancario\servlets\SaldoServlet.java
+C:\repositorios_github\sistema-bancario\ATMBancario\src\main\java\com\mycompany\atmbancario\servlets\TransferenciaServlet.java

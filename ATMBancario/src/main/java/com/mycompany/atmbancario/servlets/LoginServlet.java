@@ -1,6 +1,8 @@
 package com.mycompany.atmbancario.servlets;
 
 import com.mycompany.atmbancario.db.DatabaseConnection;
+import com.mycompany.atmbancario.models.Usuario;
+import com.mycompany.atmbancario.models.UsuarioDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -21,24 +23,18 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
         String cpf = request.getParameter("cpf");
         String senha = request.getParameter("senha");
-
-        try (Connection conn = DatabaseConnection.getConnection()) {
-            String sql = "SELECT id_usuario FROM usuarios WHERE cpf = ? AND senha = ?";
-            try (PreparedStatement stmt = conn.prepareStatement(sql)) {
-                stmt.setString(1, cpf);
-                stmt.setString(2, senha);
-                ResultSet rs = stmt.executeQuery();
-
-                if (rs.next()) {
-                    HttpSession session = request.getSession();
-                    session.setAttribute("id_usuario", rs.getInt("id_usuario"));
-                    response.sendRedirect("atm.jsp");
-                } else {
-                    response.sendRedirect("index.jsp?error=1");
-                }
-            }
-        } catch (SQLException e) {
-            throw new ServletException("Erro ao autenticar usuário", e);
+        
+        UsuarioDAO dao = new UsuarioDAO();
+        
+        Usuario usuario = dao.buscarPorCpfSenha(cpf, senha);
+        
+        if (usuario != null) {
+            HttpSession session = request.getSession();
+            session.setAttribute("id_usuario", usuario.getIdUsuario());
+            response.sendRedirect("atm.jsp");
+        } else {
+            response.sendRedirect("index.jsp?error=1");
         }
+            
     }
 }
