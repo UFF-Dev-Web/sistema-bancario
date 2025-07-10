@@ -28,11 +28,7 @@ public class LoginServlet extends HttpServlet {
         if (usuario != null) {
             HttpSession session = request.getSession();
             session.setAttribute("id_usuario", usuario.getIdUsuario());
-            
-            ContaDAO contaDAO = new ContaDAO();
-            Conta conta = contaDAO.buscarPorIdUsuario(usuario.getIdUsuario());
-            session.setAttribute("conta", conta);
-            
+                
             response.sendRedirect("atm.jsp");
         } else {
             response.sendRedirect("index.jsp?error=1");

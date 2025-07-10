@@ -1,7 +1,11 @@
+<%@page import="com.mycompany.atmbancario.models.ContaDAO"%>
 <%@page import="com.mycompany.atmbancario.models.Conta"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-    Conta conta = (Conta) session.getAttribute("conta");
+    Integer id_usuario = (Integer) session.getAttribute("id_usuario");
+    ContaDAO contaDAO = new ContaDAO();
+    Conta conta = contaDAO.buscarPorIdUsuario(id_usuario);
+    
 %>
 
 <!DOCTYPE html>
